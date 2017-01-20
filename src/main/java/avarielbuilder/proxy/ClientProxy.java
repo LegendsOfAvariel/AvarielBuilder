@@ -5,11 +5,14 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
-public class ClientProxy extends ServerProxy {
+public class ClientProxy extends ServerProxy {	
 	
-	public void preInit(FMLPreInitializationEvent e) {
-		super.preInit(e);
-		BlockRegistry.clientInitAll();
+	BlockRegistry blockRegistry;
+	
+	public void preInit(FMLPreInitializationEvent e, BlockRegistry br) {
+		super.preInit(e, br);
+		blockRegistry = br;
+        blockRegistry.clientInitAll();
 	}
 	
 	public void init(FMLInitializationEvent e) {

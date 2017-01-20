@@ -8,7 +8,7 @@ import net.minecraft.item.ItemBlock;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
-public class AvarielBlock extends Block {
+public abstract class AvarielBlock extends Block {
 
 	public AvarielBlock(String name, Material material, Float hardness) {
 		super(material);
@@ -30,5 +30,9 @@ public class AvarielBlock extends Block {
 		GameRegistry.register(block);
 		GameRegistry.register(itemBlock);
 	}
+	
+	public abstract ItemBlock getItemBlock();
+	public abstract void serverInit();
+    public abstract void clientInit();
 
 }

@@ -3,6 +3,7 @@ package avarielbuilder;
 import org.apache.logging.log4j.Logger;
 
 import avarielbuilder.proxy.ServerProxy;
+import avarielbuilder.registries.BlockRegistry;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;
@@ -23,12 +24,13 @@ public class AvarielBuilderCore {
 	@Instance
 	public static AvarielBuilderCore instance; //Needs to be static
 	
-	public static Logger logger; //Blank logger for use in preinit, needs to be static
+	public Logger logger; //Blank logger for use in preinit
 	
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent e) {
 		logger = e.getModLog(); //Forge recommends that this is used.
-		proxy.preInit(e);
+		BlockRegistry blockRegistry = new BlockRegistry();
+		proxy.preInit(e, blockRegistry);
 	}
 	
 	@EventHandler

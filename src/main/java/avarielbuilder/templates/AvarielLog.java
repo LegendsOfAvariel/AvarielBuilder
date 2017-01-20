@@ -12,7 +12,7 @@ import net.minecraft.item.ItemBlock;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
-public class AvarielLog extends BlockLog {
+public abstract class AvarielLog extends BlockLog {
 	
 	public AvarielLog(String name){
 		this.setRegistryName(name);
@@ -57,15 +57,17 @@ public class AvarielLog extends BlockLog {
 	}
 	
 	//Applies textures and models to a given block and it's item form.
-	public static void render(Block block) {
-		Item item = Item.getItemFromBlock(block);
+	public void render() {
+		Item item = Item.getItemFromBlock(this);
 		ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation(item.getRegistryName(), "inventory"));
 	}
 		
 	//Registers a block and itemblock pair. This exists for the sake of compactness.
-	public static void register(Block block, ItemBlock itemBlock) {
-		GameRegistry.register(block);
-		GameRegistry.register(itemBlock);
+	public void register() {
+		GameRegistry.register((Block)this);
+		GameRegistry.register(this.getItemBlock());
 	}
 	
+	public abstract ItemBlock getItemBlock();
+    
 }

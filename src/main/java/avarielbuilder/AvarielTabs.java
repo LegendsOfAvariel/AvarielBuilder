@@ -3,6 +3,7 @@ package avarielbuilder;
 import avarielbuilder.blocks.logs.AshLog;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 
 public class AvarielTabs {
@@ -13,7 +14,7 @@ public class AvarielTabs {
 	public static final CreativeTabs tabAvarielTrees = new CreativeTabs("AvarielTrees") {
 		@Override
 		public Item getTabIconItem() {
-			return Item.getItemFromBlock(AshLog.ashLogBlock);
+			return Item.getItemFromBlock(Blocks.SAPLING);
 		}
 	};
 	
