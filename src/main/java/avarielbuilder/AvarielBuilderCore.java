@@ -24,13 +24,15 @@ public class AvarielBuilderCore {
 	@Instance
 	public static AvarielBuilderCore instance; //Needs to be static
 	
-	public Logger logger; //Blank logger for use in preinit
+	protected Logger logger; //Blank logger for use in preinit
+	protected BlockRegistry br;
 	
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent e) {
 		logger = e.getModLog(); //Forge recommends that this is used.
-		BlockRegistry blockRegistry = new BlockRegistry();
-		proxy.preInit(e, blockRegistry);
+		br = new BlockRegistry();
+		proxy.preInit(e, br);
+		AvarielTabs.setAvarielTreesTabIcon(br.getBlock("AshLog"));
 	}
 	
 	@EventHandler
@@ -42,5 +44,5 @@ public class AvarielBuilderCore {
 	public void postInit(FMLPostInitializationEvent e) {
 		proxy.postInit(e);
 	}
-	
+
 }

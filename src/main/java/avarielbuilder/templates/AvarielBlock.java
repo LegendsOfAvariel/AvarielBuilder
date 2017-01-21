@@ -20,19 +20,17 @@ public abstract class AvarielBlock extends Block {
 	}
 	
 	//Applies textures and models to a given block and it's item form.
-	public void render(Block block) {
-		Item item = Item.getItemFromBlock(block);
+	public void render() {
+		Item item = Item.getItemFromBlock(this);
 		ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation(item.getRegistryName(), "inventory"));
 	}
 		
 	//Registers a block and itemblock pair. This exists for the sake of compactness.
-	public void register(Block block, ItemBlock itemBlock) {
-		GameRegistry.register(block);
-		GameRegistry.register(itemBlock);
+	public void register() {
+		GameRegistry.register(this);
+		GameRegistry.register(this.getItemBlock());
 	}
 	
 	public abstract ItemBlock getItemBlock();
-	public abstract void serverInit();
-    public abstract void clientInit();
 
 }

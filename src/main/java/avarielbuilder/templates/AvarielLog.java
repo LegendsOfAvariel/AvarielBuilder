@@ -1,7 +1,6 @@
 package avarielbuilder.templates;
 
 import avarielbuilder.AvarielTabs;
-import net.minecraft.block.Block;
 import net.minecraft.block.BlockLog;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.state.BlockStateContainer;
@@ -64,7 +63,7 @@ public abstract class AvarielLog extends BlockLog {
 		
 	//Registers a block and itemblock pair. This exists for the sake of compactness.
 	public void register() {
-		GameRegistry.register((Block)this);
+		GameRegistry.register(this);
 		GameRegistry.register(this.getItemBlock());
 	}
 	

@@ -6,12 +6,12 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
 public class ServerProxy {
-	
-	BlockRegistry blockRegistry;
-	 
+
+    protected BlockRegistry br;
+
     public void preInit(FMLPreInitializationEvent e, BlockRegistry br) {
-        blockRegistry = br;
-        blockRegistry.serverInitAll();
+        this.br = br;
+        this.br.serverInitAll();
     }
    
     public void init(FMLInitializationEvent e) {

@@ -1,35 +1,51 @@
 package avarielbuilder.registries;
 
-import java.util.Iterator;
-import java.util.LinkedList;
-
 import avarielbuilder.blocks.logs.AshLog;
+import avarielbuilder.templates.AvarielBlock;
 import avarielbuilder.templates.AvarielLog;
 import net.minecraft.block.Block;
 
+import java.util.HashMap;
+import java.util.Iterator;
+
 public class BlockRegistry {
-	
-	protected final LinkedList<Block> blockList;
-	 
+
+    HashMap<String,Block> blockMap;
+
     public BlockRegistry() {
-        blockList = new LinkedList<Block>();
- 
-        blockList.add(new AshLog());
+        blockMap = new HashMap<String,Block>();
+
+        blockMap.put("AshLog", new AshLog());
     }
- 
+
+    public Block getBlock(String name) {
+        return blockMap.get(name);
+    }
+
     public void serverInitAll() {
-       
-        Iterator i = blockList.iterator();
+        Iterator<Block> i = blockMap.values().iterator();
         while (i.hasNext()) {
-            ((AvarielLog) i.next()).register();
+            Block block = i.next();
+            if (block instanceof AvarielLog) {
+                ((AvarielLog)block).register();
+            }
+			else if (block instanceof AvarielBlock) {
+                ((AvarielBlock)block).register();
+            }
         }
     }
-   
+
     public void clientInitAll() {
-        Iterator i = blockList.iterator();
+        Iterator<Block> i = blockMap.values().iterator();
         while (i.hasNext()) {
-            ((AvarielLog) i.next()).render();
+            Block block = i.next();
+            if (block instanceof AvarielLog) {
+                ((AvarielLog)block).render();
+            }
+			else if (block instanceof AvarielBlock) {
+                ((AvarielBlock)block).render();
+            }
         }
     }
-	
+
 }

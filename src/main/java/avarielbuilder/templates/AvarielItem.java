@@ -4,7 +4,7 @@ import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.model.ModelLoader;
 
-public class AvarielItem extends Item {
+public abstract class AvarielItem extends Item {
 	
 	public AvarielItem(String name) {
 		this.setRegistryName(name);
@@ -12,8 +12,8 @@ public class AvarielItem extends Item {
 	}
 	
 	//Render the item
-	public void render(Item item) {
-		ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation(item.getRegistryName(), "inventory"));
+	public void render() {
+		ModelLoader.setCustomModelResourceLocation(this, 0, new ModelResourceLocation(this.getRegistryName(), "inventory"));
 	}
 	
 }
