@@ -1,5 +1,6 @@
 package avarielbuilder;
 
+import net.minecraft.block.Block;
 import org.apache.logging.log4j.Logger;
 
 import avarielbuilder.proxy.ServerProxy;
@@ -18,7 +19,7 @@ public class AvarielBuilderCore {
 	
 	//Proxy setup
 	@SidedProxy(clientSide = Info.client, serverSide = Info.server)
-	public static ServerProxy proxy; //Needs to be static
+	private static ServerProxy proxy; //Needs to be static
 	
 	//Create instance for interaction with other mods
 	@Instance
@@ -32,7 +33,7 @@ public class AvarielBuilderCore {
 		logger = e.getModLog(); //Forge recommends that this is used.
 		br = new BlockRegistry();
 		proxy.preInit(e, br);
-		AvarielTabs.setAvarielTreesTabIcon(br.getBlock("AshLog"));
+		AvarielTabs.avarielTreesTabIcon = (Block)br.getBlock("AshLog");
 	}
 	
 	@EventHandler

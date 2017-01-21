@@ -9,11 +9,7 @@ import net.minecraft.item.Item;
 public class AvarielTabs {
 	
 	//Creative tabs need to be static
-	private static Block avarielTreesTabIcon = Blocks.SAPLING;
-
-	public static void setAvarielTreesTabIcon(Block block) {
-		avarielTreesTabIcon = block;
-	}
+	protected static Block avarielTreesTabIcon = Blocks.SAPLING;
 	
 	//Tree tab
 	public static final CreativeTabs tabAvarielTrees = new CreativeTabs("AvarielTrees") {

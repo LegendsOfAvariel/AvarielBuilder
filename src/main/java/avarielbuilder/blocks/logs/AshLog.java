@@ -1,11 +1,9 @@
 package avarielbuilder.blocks.logs;
 
-import avarielbuilder.templates.AvarielLog;
-import net.minecraft.block.Block;
-import net.minecraft.item.Item;
+import avarielbuilder.templates.AvarielAbstractLog;
 import net.minecraft.item.ItemBlock;
 
-public class AshLog extends AvarielLog {
+public class AshLog extends AvarielAbstractLog {
 
 	private final ItemBlock ashLogItem;
 	 

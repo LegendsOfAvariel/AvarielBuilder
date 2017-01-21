@@ -4,9 +4,9 @@ import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.model.ModelLoader;
 
-public abstract class AvarielItem extends Item {
+public abstract class AvarielAbstractItem extends Item {
 	
-	public AvarielItem(String name) {
+	public AvarielAbstractItem(String name) {
 		this.setRegistryName(name);
 		this.setUnlocalizedName(this.getRegistryName().toString());
 	}
