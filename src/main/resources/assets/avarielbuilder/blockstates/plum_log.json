@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "axis=y":    { "model": "avarielbuilder:plum_log" },
+        "axis=z":     { "model": "avarielbuilder:plum_log", "x": 90 },
+        "axis=x":     { "model": "avarielbuilder:plum_log", "x": 90, "y": 90 },
+        "axis=none":   { "model": "avarielbuilder:plum_log_bark" }
+    }
+}

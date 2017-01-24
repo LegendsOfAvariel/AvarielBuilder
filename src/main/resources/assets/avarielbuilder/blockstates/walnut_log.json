@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "axis=y":    { "model": "avarielbuilder:walnut_log" },
+        "axis=z":     { "model": "avarielbuilder:walnut_log", "x": 90 },
+        "axis=x":     { "model": "avarielbuilder:walnut_log", "x": 90, "y": 90 },
+        "axis=none":   { "model": "avarielbuilder:walnut_log_bark" }
+    }
+}

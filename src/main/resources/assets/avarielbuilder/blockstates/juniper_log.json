@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "axis=y":    { "model": "avarielbuilder:juniper_log" },
+        "axis=z":     { "model": "avarielbuilder:juniper_log", "x": 90 },
+        "axis=x":     { "model": "avarielbuilder:juniper_log", "x": 90, "y": 90 },
+        "axis=none":   { "model": "avarielbuilder:juniper_log_bark" }
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "axis=y":    { "model": "avarielbuilder:white_oak_log" },
+        "axis=z":     { "model": "avarielbuilder:white_oak_log", "x": 90 },
+        "axis=x":     { "model": "avarielbuilder:white_oak_log", "x": 90, "y": 90 },
+        "axis=none":   { "model": "avarielbuilder:white_oak_log_bark" }
+    }
+}

@@ -1,0 +1,7 @@
+{
+    "parent": "block/cube_column",
+    "textures": {
+        "end": "avarielbuilder:blocks/logs/willow_log_end",
+        "side": "avarielbuilder:blocks/logs/willow_log_side"
+    }
+}

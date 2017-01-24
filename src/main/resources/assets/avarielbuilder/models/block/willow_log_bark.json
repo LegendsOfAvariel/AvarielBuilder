@@ -1,0 +1,6 @@
+{
+    "parent": "block/cube_all",
+    "textures": {
+        "all": "avarielbuilder:blocks/logs/willow_log_side"
+    }
+}

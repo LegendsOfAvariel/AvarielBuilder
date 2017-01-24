@@ -1,0 +1,6 @@
+{
+    "parent": "block/cube_all",
+    "textures": {
+        "all": "avarielbuilder:blocks/logs/juniper_log_side"
+    }
+}

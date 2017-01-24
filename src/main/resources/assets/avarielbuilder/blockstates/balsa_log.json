@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "axis=y":    { "model": "avarielbuilder:balsa_log" },
+        "axis=z":     { "model": "avarielbuilder:balsa_log", "x": 90 },
+        "axis=x":     { "model": "avarielbuilder:balsa_log", "x": 90, "y": 90 },
+        "axis=none":   { "model": "avarielbuilder:balsa_log_bark" }
+    }
+}

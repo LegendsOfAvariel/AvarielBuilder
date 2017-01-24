@@ -55,14 +55,14 @@ public abstract class AvarielAbstractLog extends BlockLog implements AvarielBloc
 		return new BlockStateContainer(this, new IProperty[] {LOG_AXIS});
 	}
 	
-	//Applies textures and models to a given block and it's item form.
+	//Applies textures and models to the block and it's item form.
 	@Override
 	public void render() {
 		Item item = Item.getItemFromBlock(this);
 		ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation(item.getRegistryName(), "inventory"));
 	}
 		
-	//Registers a block and itemblock pair. This exists for the sake of compactness.
+	//Registers the block and itemblock pair.
 	@Override
 	public void register() {
 		GameRegistry.register(this);

@@ -1,0 +1,6 @@
+{
+    "parent": "block/cube_all",
+    "textures": {
+        "all": "avarielbuilder:blocks/logs/balsa_log_side"
+    }
+}

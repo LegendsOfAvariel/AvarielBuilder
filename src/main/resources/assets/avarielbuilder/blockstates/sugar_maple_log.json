@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "axis=y":    { "model": "avarielbuilder:sugar_maple_log" },
+        "axis=z":     { "model": "avarielbuilder:sugar_maple_log", "x": 90 },
+        "axis=x":     { "model": "avarielbuilder:sugar_maple_log", "x": 90, "y": 90 },
+        "axis=none":   { "model": "avarielbuilder:sugar_maple_log_bark" }
+    }
+}

@@ -1,0 +1,6 @@
+{
+    "parent": "block/cube_all",
+    "textures": {
+        "all": "avarielbuilder:blocks/logs/sugar_maple_log_side"
+    }
+}

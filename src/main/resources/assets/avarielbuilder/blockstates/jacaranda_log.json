@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "axis=y":    { "model": "avarielbuilder:jacaranda_log" },
+        "axis=z":     { "model": "avarielbuilder:jacaranda_log", "x": 90 },
+        "axis=x":     { "model": "avarielbuilder:jacaranda_log", "x": 90, "y": 90 },
+        "axis=none":   { "model": "avarielbuilder:jacaranda_log_bark" }
+    }
+}

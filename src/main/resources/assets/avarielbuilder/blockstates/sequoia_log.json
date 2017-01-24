@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "axis=y":    { "model": "avarielbuilder:sequoia_log" },
+        "axis=z":     { "model": "avarielbuilder:sequoia_log", "x": 90 },
+        "axis=x":     { "model": "avarielbuilder:sequoia_log", "x": 90, "y": 90 },
+        "axis=none":   { "model": "avarielbuilder:sequoia_log_bark" }
+    }
+}
