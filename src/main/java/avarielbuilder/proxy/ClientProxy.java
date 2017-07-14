@@ -1,6 +1,8 @@
 package avarielbuilder.proxy;
 
+import avarielbuilder.Info;
 import avarielbuilder.registries.BlockRegistry;
+import net.minecraftforge.client.model.obj.OBJLoader;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;

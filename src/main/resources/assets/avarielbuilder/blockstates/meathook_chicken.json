@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=north": { "model": "avarielbuilder:meathook_chicken" },
+		"facing=east": { "model": "avarielbuilder:meathook_chicken", "y": 90 },
+		"facing=south": { "model": "avarielbuilder:meathook_chicken", "y": 180 },
+		"facing=west": { "model": "avarielbuilder:meathook_chicken", "y": 270 }
+    }
+}

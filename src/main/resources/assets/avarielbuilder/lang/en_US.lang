@@ -1,4 +1,5 @@
 itemGroup.AvarielTrees=Avariel Trees
+itemGroup.AvarielDeco=Avariel Decorations
 
 tile.avarielbuilder:ash_leaves.name=Ash Leaves
 tile.avarielbuilder:balsa_leaves.name=Balsa Leaves
@@ -50,3 +51,18 @@ tile.avarielbuilder:walnut_planks.name=Walnut Planks
 tile.avarielbuilder:white_alder_planks.name=White Alder Planks
 tile.avarielbuilder:white_oak_planks.name=White Oak Planks
 tile.avarielbuilder:willow_planks.name=Willow Planks
+
+tile.avarielbuilder:display_case.name=Display Case
+tile.avarielbuilder:tankard.name=Tankard
+tile.avarielbuilder:couch_left.name=Couch - Left Armrest
+tile.avarielbuilder:couch_mid.name=Couch - Middle Segment
+tile.avarielbuilder:couch_right.name=Couch - Right Armrest
+tile.avarielbuilder:meathook_empty.name=Empty Meathook
+tile.avarielbuilder:meathook_beef.name=Beef Meathook
+tile.avarielbuilder:meathook_pork.name=Pork Meathook
+tile.avarielbuilder:meathook_mutton.name=Mutton Meathook
+tile.avarielbuilder:meathook_chicken.name=Chicken Meathook
+tile.avarielbuilder:meathook_rabbit.name=Rabbit Meathook
+tile.avarielbuilder:meathook_cod.name=Fish Meathook
+tile.avarielbuilder:meathook_salmon.name=Salmon Meathook
+tile.avarielbuilder:meathook_clownfish.name=Clownfish Meathook

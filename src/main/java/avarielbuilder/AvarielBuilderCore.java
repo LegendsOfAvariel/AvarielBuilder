@@ -34,6 +34,7 @@ public class AvarielBuilderCore {
 		br = new BlockRegistry();
 		proxy.preInit(e, br);
 		AvarielTabs.avarielTreesTabIcon = (Block)br.getBlock("AshLog");
+		AvarielTabs.avarielDecoTabIcon = (Block)br.getBlock("Barrel");
 	}
 	
 	@EventHandler

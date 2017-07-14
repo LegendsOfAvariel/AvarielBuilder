@@ -3,63 +3,81 @@ package avarielbuilder.registries;
 import java.util.HashMap;
 import java.util.Iterator;
 
-import avarielbuilder.blocks.leaves.AshLeaves;
-import avarielbuilder.blocks.leaves.BalsaLeaves;
-import avarielbuilder.blocks.leaves.CedarLeaves;
-import avarielbuilder.blocks.leaves.CherryBlossomsLeaves;
-import avarielbuilder.blocks.leaves.EbonyLeaves;
-import avarielbuilder.blocks.leaves.JacarandaLeaves;
-import avarielbuilder.blocks.leaves.JuniperLeaves;
-import avarielbuilder.blocks.leaves.PalmLeaves;
-import avarielbuilder.blocks.leaves.PersimmonLeaves;
-import avarielbuilder.blocks.leaves.PlumLeaves;
-import avarielbuilder.blocks.leaves.SequoiaLeaves;
-import avarielbuilder.blocks.leaves.SugarMapleLeaves;
-import avarielbuilder.blocks.leaves.WalnutLeaves;
-import avarielbuilder.blocks.leaves.WhiteAlderLeaves;
-import avarielbuilder.blocks.leaves.WhiteOakLeaves;
-import avarielbuilder.blocks.leaves.WillowLeaves;
-import avarielbuilder.blocks.logs.AshLog;
-import avarielbuilder.blocks.logs.BalsaLog;
-import avarielbuilder.blocks.logs.CedarLog;
-import avarielbuilder.blocks.logs.CherryLog;
-import avarielbuilder.blocks.logs.EbonyLog;
-import avarielbuilder.blocks.logs.JacarandaLog;
-import avarielbuilder.blocks.logs.JuniperLog;
-import avarielbuilder.blocks.logs.PalmLog;
-import avarielbuilder.blocks.logs.PersimmonLog;
-import avarielbuilder.blocks.logs.PlumLog;
-import avarielbuilder.blocks.logs.SequoiaLog;
-import avarielbuilder.blocks.logs.SugarMapleLog;
-import avarielbuilder.blocks.logs.WalnutLog;
-import avarielbuilder.blocks.logs.WhiteAlderLog;
-import avarielbuilder.blocks.logs.WhiteOakLog;
-import avarielbuilder.blocks.logs.WillowLog;
-import avarielbuilder.blocks.planks.AshPlanks;
-import avarielbuilder.blocks.planks.BalsaPlanks;
-import avarielbuilder.blocks.planks.CedarPlanks;
-import avarielbuilder.blocks.planks.CherryPlanks;
-import avarielbuilder.blocks.planks.EbonyPlanks;
-import avarielbuilder.blocks.planks.JacarandaPlanks;
-import avarielbuilder.blocks.planks.JuniperPlanks;
-import avarielbuilder.blocks.planks.PalmPlanks;
-import avarielbuilder.blocks.planks.PersimmonPlanks;
-import avarielbuilder.blocks.planks.PlumPlanks;
-import avarielbuilder.blocks.planks.SequoiaPlanks;
-import avarielbuilder.blocks.planks.SugarMaplePlanks;
-import avarielbuilder.blocks.planks.WalnutPlanks;
-import avarielbuilder.blocks.planks.WhiteAlderPlanks;
-import avarielbuilder.blocks.planks.WhiteOakPlanks;
-import avarielbuilder.blocks.planks.WillowPlanks;
-import avarielbuilder.templates.AvarielBlock;
+import avarielbuilder.blocks.decoration.fixed.Barrel;
+import avarielbuilder.blocks.decoration.fixed.Crate;
+import avarielbuilder.blocks.decoration.rotatable.CouchLeft;
+import avarielbuilder.blocks.decoration.rotatable.CouchMid;
+import avarielbuilder.blocks.decoration.rotatable.CouchRight;
+import avarielbuilder.blocks.decoration.rotatable.DisplayCase;
+import avarielbuilder.blocks.decoration.rotatable.MeathookBeef;
+import avarielbuilder.blocks.decoration.rotatable.MeathookChicken;
+import avarielbuilder.blocks.decoration.rotatable.MeathookClownfish;
+import avarielbuilder.blocks.decoration.rotatable.MeathookCod;
+import avarielbuilder.blocks.decoration.rotatable.MeathookEmpty;
+import avarielbuilder.blocks.decoration.rotatable.MeathookMutton;
+import avarielbuilder.blocks.decoration.rotatable.MeathookPork;
+import avarielbuilder.blocks.decoration.rotatable.MeathookRabbit;
+import avarielbuilder.blocks.decoration.rotatable.MeathookSalmon;
+import avarielbuilder.blocks.decoration.rotatable.Tankard;
+import avarielbuilder.blocks.trees.leaves.AshLeaves;
+import avarielbuilder.blocks.trees.leaves.BalsaLeaves;
+import avarielbuilder.blocks.trees.leaves.CedarLeaves;
+import avarielbuilder.blocks.trees.leaves.CherryBlossomsLeaves;
+import avarielbuilder.blocks.trees.leaves.EbonyLeaves;
+import avarielbuilder.blocks.trees.leaves.JacarandaLeaves;
+import avarielbuilder.blocks.trees.leaves.JuniperLeaves;
+import avarielbuilder.blocks.trees.leaves.PalmLeaves;
+import avarielbuilder.blocks.trees.leaves.PersimmonLeaves;
+import avarielbuilder.blocks.trees.leaves.PlumLeaves;
+import avarielbuilder.blocks.trees.leaves.SequoiaLeaves;
+import avarielbuilder.blocks.trees.leaves.SugarMapleLeaves;
+import avarielbuilder.blocks.trees.leaves.WalnutLeaves;
+import avarielbuilder.blocks.trees.leaves.WhiteAlderLeaves;
+import avarielbuilder.blocks.trees.leaves.WhiteOakLeaves;
+import avarielbuilder.blocks.trees.leaves.WillowLeaves;
+import avarielbuilder.blocks.trees.logs.AshLog;
+import avarielbuilder.blocks.trees.logs.BalsaLog;
+import avarielbuilder.blocks.trees.logs.CedarLog;
+import avarielbuilder.blocks.trees.logs.CherryLog;
+import avarielbuilder.blocks.trees.logs.EbonyLog;
+import avarielbuilder.blocks.trees.logs.JacarandaLog;
+import avarielbuilder.blocks.trees.logs.JuniperLog;
+import avarielbuilder.blocks.trees.logs.PalmLog;
+import avarielbuilder.blocks.trees.logs.PersimmonLog;
+import avarielbuilder.blocks.trees.logs.PlumLog;
+import avarielbuilder.blocks.trees.logs.SequoiaLog;
+import avarielbuilder.blocks.trees.logs.SugarMapleLog;
+import avarielbuilder.blocks.trees.logs.WalnutLog;
+import avarielbuilder.blocks.trees.logs.WhiteAlderLog;
+import avarielbuilder.blocks.trees.logs.WhiteOakLog;
+import avarielbuilder.blocks.trees.logs.WillowLog;
+import avarielbuilder.blocks.trees.planks.AshPlanks;
+import avarielbuilder.blocks.trees.planks.BalsaPlanks;
+import avarielbuilder.blocks.trees.planks.CedarPlanks;
+import avarielbuilder.blocks.trees.planks.CherryPlanks;
+import avarielbuilder.blocks.trees.planks.EbonyPlanks;
+import avarielbuilder.blocks.trees.planks.JacarandaPlanks;
+import avarielbuilder.blocks.trees.planks.JuniperPlanks;
+import avarielbuilder.blocks.trees.planks.PalmPlanks;
+import avarielbuilder.blocks.trees.planks.PersimmonPlanks;
+import avarielbuilder.blocks.trees.planks.PlumPlanks;
+import avarielbuilder.blocks.trees.planks.SequoiaPlanks;
+import avarielbuilder.blocks.trees.planks.SugarMaplePlanks;
+import avarielbuilder.blocks.trees.planks.WalnutPlanks;
+import avarielbuilder.blocks.trees.planks.WhiteAlderPlanks;
+import avarielbuilder.blocks.trees.planks.WhiteOakPlanks;
+import avarielbuilder.blocks.trees.planks.WillowPlanks;
+import avarielbuilder.templates.IAvarielBlock;
+import avarielbuilder.test.blocks.CullingTester;
 
 public class BlockRegistry {
 
-    private HashMap<String,AvarielBlock> blockMap;
+    private HashMap<String,IAvarielBlock> blockMap;
 
     public BlockRegistry() {
-        blockMap = new HashMap<String,AvarielBlock>();
+        blockMap = new HashMap<String,IAvarielBlock>();
 
+        //Trees - Leaves
         blockMap.put("AshLeaves", new AshLeaves());
         blockMap.put("BalsaLeaves", new BalsaLeaves());
         blockMap.put("CedarLeaves", new CedarLeaves());
@@ -77,6 +95,7 @@ public class BlockRegistry {
         blockMap.put("WhiteOakLeaves", new WhiteOakLeaves());
         blockMap.put("WillowLeaves", new WillowLeaves());
         
+        //Trees - Logs
         blockMap.put("AshLog", new AshLog());
         blockMap.put("BalsaLog", new BalsaLog());
         blockMap.put("CedarLog", new CedarLog());
@@ -94,6 +113,7 @@ public class BlockRegistry {
         blockMap.put("WhiteOakLog", new WhiteOakLog());
         blockMap.put("WillowLog", new WillowLog());
         
+        //Trees - Planks
         blockMap.put("AshPlanks", new AshPlanks());
         blockMap.put("BalsaPlanks", new BalsaPlanks());
         blockMap.put("CedarPlanks", new CedarPlanks());
@@ -110,21 +130,44 @@ public class BlockRegistry {
         blockMap.put("WhiteAlderPlanks", new WhiteAlderPlanks());
         blockMap.put("WhiteOakPlanks", new WhiteOakPlanks());
         blockMap.put("WillowPlanks", new WillowPlanks());
+        
+        //Decoration
+        blockMap.put("Barrel", new Barrel());
+        blockMap.put("CouchLeft", new CouchLeft());
+        blockMap.put("CouchMid", new CouchMid());
+        blockMap.put("CouchRight", new CouchRight());
+        blockMap.put("Crate", new Crate());
+        blockMap.put("DisplayCase", new DisplayCase());
+        blockMap.put("MeathookBeef", new MeathookBeef());
+        blockMap.put("MeathookChicken", new MeathookChicken());
+        blockMap.put("MeathookClownfish", new MeathookClownfish());
+        blockMap.put("MeathookCod", new MeathookCod());
+        blockMap.put("MeathookEmpty", new MeathookEmpty());
+        blockMap.put("MeathookMutton", new MeathookMutton());
+        blockMap.put("MeathookPork", new MeathookPork());
+        blockMap.put("MeathookRabbit", new MeathookRabbit());
+        blockMap.put("MeathookSalmon", new MeathookSalmon());
+        blockMap.put("Tankard", new Tankard());
+        
+        //Utility
+        
+        //Test
+        blockMap.put("CullingTester", new CullingTester());
     }
 
-    public AvarielBlock getBlock(String name) {
+    public IAvarielBlock getBlock(String name) {
         return blockMap.get(name);
     }
 
     public void serverInitAll() {
-        Iterator<AvarielBlock> i = blockMap.values().iterator();
+        Iterator<IAvarielBlock> i = blockMap.values().iterator();
         while (i.hasNext()) {
             i.next().register();
         }
     }
 
     public void clientInitAll() {
-        Iterator<AvarielBlock> i = blockMap.values().iterator();
+        Iterator<IAvarielBlock> i = blockMap.values().iterator();
         while (i.hasNext()) {
             i.next().render();
         }

@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=north": { "model": "avarielbuilder:meathook_clownfish" },
+		"facing=east": { "model": "avarielbuilder:meathook_clownfish", "y": 90 },
+		"facing=south": { "model": "avarielbuilder:meathook_clownfish", "y": 180 },
+		"facing=west": { "model": "avarielbuilder:meathook_clownfish", "y": 270 }
+    }
+}

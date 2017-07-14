@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=north": { "model": "avarielbuilder:display_case" },
+		"facing=east": { "model": "avarielbuilder:display_case", "y": 90 },
+		"facing=south": { "model": "avarielbuilder:display_case", "y": 180 },
+		"facing=west": { "model": "avarielbuilder:display_case", "y": 270 }
+    }
+}

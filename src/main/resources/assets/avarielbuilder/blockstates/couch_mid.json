@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=north": { "model": "avarielbuilder:couch_mid" },
+		"facing=east": { "model": "avarielbuilder:couch_mid", "y": 90 },
+		"facing=south": { "model": "avarielbuilder:couch_mid", "y": 180 },
+		"facing=west": { "model": "avarielbuilder:couch_mid", "y": 270 }
+    }
+}

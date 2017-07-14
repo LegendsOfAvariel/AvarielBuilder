@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=north": { "model": "avarielbuilder:meathook_empty" },
+		"facing=east": { "model": "avarielbuilder:meathook_empty", "y": 90 },
+		"facing=south": { "model": "avarielbuilder:meathook_empty", "y": 180 },
+		"facing=west": { "model": "avarielbuilder:meathook_empty", "y": 270 }
+    }
+}
